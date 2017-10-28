@@ -31,6 +31,12 @@ public class ChequeDAOHibernate implements ChequeDAO {
         this.manager.flush();
         this.manager.getTransaction().commit();
     }
+	
+	@Override
+    public void atualizar(Cheque cheque) {
+        this.manager.merge(cheque);
+	}
+	
     @Override
     public void excluir(Cheque cheque) {
         //this.session.delete(cheque);

@@ -68,7 +68,8 @@ public class ChequeRN {
 		if (cheque != null) {
 			cheque.setSituacao(Cheque.SITUACAO_CHEQUE_BAIXADO);
 			cheque.setLancamento(lancamento);
-			this.chequeDAO.salvar(cheque);
+			//this.chequeDAO.salvar(cheque);
+			this.chequeDAO.atualizar(cheque);
 		}
 	}
 
