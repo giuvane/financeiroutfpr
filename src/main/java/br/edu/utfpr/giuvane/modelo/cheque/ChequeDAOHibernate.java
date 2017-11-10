@@ -26,10 +26,10 @@ public class ChequeDAOHibernate implements ChequeDAO {
     @Override
     public void salvar(Cheque cheque) {
         //this.session.saveOrUpdate(cheque);
-        this.manager.getTransaction().begin();
+        //this.manager.getTransaction().begin();
         this.manager.persist(cheque);
-        this.manager.flush();
-        this.manager.getTransaction().commit();
+        //this.manager.flush();
+        //this.manager.getTransaction().commit();
     }
 	
 	@Override

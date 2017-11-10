@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter(urlPatterns = { "*.jsf" })
+@WebFilter(urlPatterns = { "*.jsf", "/webservice/*" })
 public class ConexaoHibernateFilter implements Filter {
 	//private SessionFactory sf;
     private EntityManager manager;
