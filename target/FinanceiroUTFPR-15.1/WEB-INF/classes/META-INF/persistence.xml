@@ -17,8 +17,6 @@
       <property name="hibernate.cache.provider_class" value="org.hibernate.cache.NoCacheProvider"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.classloading.use_current_tccl_as_parent" value="false"/>
-      <!-- UTILIZA-SE ESSA PROPRIEDADE, CASO QUEIRA SUBSTITUIR AS PROPRIEDADES DE CONEXÃO PELO ARQUIVO META-INF/context.xml -->
-      <property name="connection.datasource" value="java:/comp/env/jdbc/FinanceiroDB"/>
     </properties>
   </persistence-unit>
 </persistence>
