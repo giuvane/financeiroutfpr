@@ -6,18 +6,21 @@ import br.edu.utfpr.giuvane.util.UtilException;
 import br.edu.utfpr.giuvane.web.util.RelatorioUtil;
 import java.util.HashMap;
 import java.util.List;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
 
-import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
+import javax.inject.Named;
 import org.primefaces.model.StreamedContent;
 
-@ManagedBean
+@Named(value = "contaBean")
 @RequestScoped
 public class ContaBean {
 	private Conta selecionada = new Conta();
 	private List<Conta> lista = null;
-	@ManagedProperty(value = "#{contextoBean}")
+	
+        @Inject
 	private ContextoBean contextoBean;
 	private StreamedContent	arquivoRetorno;
 	private int tipoRelatorio;

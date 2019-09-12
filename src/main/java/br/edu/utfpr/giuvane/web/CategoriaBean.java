@@ -1,14 +1,16 @@
 package br.edu.utfpr.giuvane.web;
 
 import java.util.*;
-import javax.faces.bean.*;
 import javax.faces.model.SelectItem;
 import org.primefaces.event.NodeSelectEvent;
 import org.primefaces.model.TreeNode;
 import org.primefaces.model.DefaultTreeNode;
 import br.edu.utfpr.giuvane.modelo.categoria.*;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@ManagedBean(name = "categoriaBean")
+@Named(value = "categoriaBean")
 @RequestScoped
 public class CategoriaBean {
 
@@ -17,7 +19,7 @@ public class CategoriaBean {
 	private List<SelectItem>	categoriasSelect;
 	private boolean					mostraEdicao = false;
 
-	@ManagedProperty(value = "#{contextoBean}")  
+	@Inject
 	private ContextoBean contextoBean;
 
 	public void novo() { 

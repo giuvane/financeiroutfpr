@@ -5,11 +5,13 @@ import br.edu.utfpr.giuvane.modelo.conta.Conta;
 import br.edu.utfpr.giuvane.util.RNException;
 import br.edu.utfpr.giuvane.web.util.MensagemUtil;
 import java.util.List;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@ManagedBean(name="chequeBean")
+@Named(value = "chequeBean")
 @RequestScoped
 public class ChequeBean {
 	private Cheque			selecionado	= new Cheque();
@@ -17,7 +19,7 @@ public class ChequeBean {
 	private Integer			chequeInicial;
 	private Integer			chequeFinal;
 
-	@ManagedProperty(value = "#{contextoBean}")
+	@Inject
 	private ContextoBean contextoBean;
 
 	public void salvar() {

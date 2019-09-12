@@ -8,8 +8,8 @@
         <Node id="admin/principal.xhtml" x="1150" y="300" zoom="true"/>
         <Node id="restrito/lancamento_edicao.xhtml" x="400" y="450" zoom="true"/>
         <Node id="publico/usuario.xhtml" x="400" y="150" zoom="true"/>
-        <Node id="restrito/principal.xhtml" x="650" y="300" zoom="true"/>
         <Node id="restrito/categoria.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="restrito/principal.xhtml" x="650" y="300" zoom="true"/>
         <Node id="restrito/conta.xhtml" x="150" y="150" zoom="true"/>
         <Node id="publico/rodape.xhtml" x="400" y="300" zoom="true"/>
         <Node id="restrito/cheque.xhtml" x="150" y="300" zoom="true"/>

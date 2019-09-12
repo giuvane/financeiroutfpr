@@ -4,15 +4,15 @@ import br.edu.utfpr.giuvane.modelo.conta.Conta;
 import br.edu.utfpr.giuvane.modelo.lancamento.Lancamento;
 import br.edu.utfpr.giuvane.modelo.lancamento.LancamentoRN;
 import java.util.*;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
+import javax.inject.Inject;
+import javax.inject.Named;
 
-@ManagedBean
+@Named
 public class PrincipalBean {	
 	private List<Lancamento>	listaAteHoje;
 	private List<Lancamento>	listaFuturos;
 	
-	@ManagedProperty(value = "#{contextoBean}")
+	@Inject
 	private ContextoBean contextoBean;
 
 	public List<Lancamento> getListaAteHoje() {

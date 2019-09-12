@@ -4,12 +4,13 @@ import br.edu.utfpr.giuvane.modelo.conta.Conta;
 import br.edu.utfpr.giuvane.modelo.conta.ContaRN;
 import br.edu.utfpr.giuvane.modelo.usuario.Usuario;
 import br.edu.utfpr.giuvane.modelo.usuario.UsuarioRN;
-import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import javax.faces.application.FacesMessage;
 import java.util.List;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 
-@ManagedBean(name = "usuarioBean")
+@Named(value = "usuarioBean")
 @RequestScoped
 public class UsuarioBean {
     private Usuario usuario = new Usuario();

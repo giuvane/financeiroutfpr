@@ -6,12 +6,14 @@ import br.edu.utfpr.giuvane.modelo.bolsa.acao.AcaoVirtual;
 import br.edu.utfpr.giuvane.web.ContextoBean;
 import br.edu.utfpr.giuvane.web.util.YahooFinanceUtil;
 import java.util.*;
+import javax.enterprise.context.RequestScoped;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
+import javax.inject.Inject;
+import javax.inject.Named;
 import org.primefaces.model.chart.PieChartModel;
 
-@ManagedBean(name = "acaoBean")
+@Named(value = "acaoBean")
 @RequestScoped
 public class AcaoBean {
 	private AcaoVirtual				selecionada						= new AcaoVirtual();
@@ -20,7 +22,7 @@ public class AcaoBean {
 	private PieChartModel			percentualQuantidade		= new PieChartModel();
 	private PieChartModel			percentualValor				= new PieChartModel();
 
-	@ManagedProperty(value = "#{contextoBean}")
+        @Inject
 	private ContextoBean contextoBean;
 
 	public void salvar() { 

@@ -7,8 +7,10 @@ import java.util.Set;
 
 import java.io.Serializable;
 import java.util.Date;
+import javax.xml.bind.annotation.XmlRootElement;
 
 @Entity
+@XmlRootElement(name="usuario")
 public class Usuario implements Serializable {
 	@Id
 	@GeneratedValue

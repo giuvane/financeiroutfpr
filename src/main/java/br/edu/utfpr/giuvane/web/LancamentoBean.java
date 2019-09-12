@@ -13,12 +13,14 @@ import br.edu.utfpr.giuvane.web.util.RelatorioUtil;
 import java.io.Serializable;
 import java.util.*;
 import javax.faces.application.FacesMessage;
-import javax.faces.bean.*;
 import javax.faces.context.FacesContext;
 import javax.faces.event.ValueChangeEvent;
+import javax.faces.view.ViewScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
 import org.primefaces.model.StreamedContent;
 
-@ManagedBean(name = "lancamentoBean")
+@Named(value = "lancamentoBean")
 @ViewScoped
 public class LancamentoBean implements Serializable {
     private static final long serialVersionUID = -3050807461213326560L;
@@ -33,7 +35,7 @@ public class LancamentoBean implements Serializable {
     private java.util.Date		dataFinalRelatorio;
     private StreamedContent	arquivoRetorno;
 
-    @ManagedProperty(value = "#{contextoBean}")
+    @Inject
     private ContextoBean contextoBean;
 
     public LancamentoBean() {
