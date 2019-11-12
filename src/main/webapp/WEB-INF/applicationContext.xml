@@ -17,4 +17,12 @@
 			<value>java:comp/env/jdbc/FinanceiroDB</value>
 		</property>
 	</bean> 	 -->
+    <bean id="messageSource"
+        class="org.springframework.context.support.ResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>spring-security-mensagens</value>
+            </list>
+        </property>
+    </bean>
 </beans>
